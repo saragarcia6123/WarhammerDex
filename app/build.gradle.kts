@@ -69,6 +69,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("androidx.hilt:hilt-navigation-fragment:1.2.0")
     implementation("com.google.devtools.ksp:symbol-processing-api:1.9.21-1.0.15")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 
     val roomVersion = "2.6.1"
 
@@ -77,4 +78,21 @@ dependencies {
     implementation("androidx.room:room-ktx:$roomVersion")
     annotationProcessor("android.arch.persistence.room:compiler:1.1.1")
 
+    val nav_version = "2.7.7"
+    // Java language implementation
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
+
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 }
